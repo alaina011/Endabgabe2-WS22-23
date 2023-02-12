@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firework</title>
-
+    <link rel="stylesheet" href="Firework.css">
+    <script src="Main.js"></script>
+    <script src="Firework.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Heart.js"></script>
+    <script src="Fountain.js"></script>
+    <script src="Vector.js"></script>
 
     <script src="https://kit.fontawesome.com/4287d81834.js" crossorigin="anonymous"></script>
 </head>
@@ -20,14 +26,41 @@
         <h1>Create your Firework</h1>
         <button id="open"> Open last Firework</button>
 
-        <form>
-            <select name="Type" id="type"></select>
-            <input type="radio" name="Color" id="color">
-            <input type="range" name="Size" id="size" min="10" max="100" step="10">
+        <form id="form">
+
+            <fieldset>
+                <legend>Type</legend>
+                <select id="type">
+                    <option value="Circle">Circle</option>
+                    <option value="Heart">Heart</option>
+                    <option value="Fountain">Fountain</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Color</legend>
+
+                <input type="radio" name="color" id="blue" class="radio" value="Blue">
+                <label for="blue">Blue</label>
+                <input type="radio" name="color" id="red" class="radio" value="Red">
+                <label for="red">Red</label>
+                <input type="radio" name="color" id="gold" class="radio" value="Gold">
+                <label for="gold">Gold</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Size</legend>
+                <span>
+                    10
+                    <input type="range" name="Size" id="size" min="10" max="100" step="10" value="10">
+                    100
+                </span>
+            </fieldset>
+            
         </form>
 
         <h3>If you are happy with the result you can save it.</h3>
-        <button type="submit">save</button>
+        <button type="submit" id="save">save</button>
 
         <ul class="list">
             <li></li>
